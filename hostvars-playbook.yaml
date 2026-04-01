@@ -1,0 +1,8 @@
+- name: hostvars
+  hosts: all
+  gather_facts: true
+  
+  tasks:
+    - name: Hostvars
+      ansible.builtin.debug:  
+        var: hostvars[inventory_hostname]
