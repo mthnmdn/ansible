@@ -1,0 +1,14 @@
+- name: Write env to dest
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Write env to dest
+      ansible.builtin.copy:
+        content: |
+          NODE_TYPE={{ node_type }}
+          ENV={{ env }}
+          PRIMARY={{ primary }}
+          DNS_SERVER={{ dns_server }}
+        dest: /tmp/my_vars.txt
+        mode: '0644'
