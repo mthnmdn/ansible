@@ -2,3 +2,5 @@ sudo apt update
 sudo apt install ansible-core -y
 
 sudo apt install tree
+
+# ansible-galaxy role init roles/k8s-label-node
